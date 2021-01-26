@@ -1,14 +1,12 @@
 package com.dmdev.HomeWork;
+import java.util.Scanner;
 //1. Имеются три числа - день, месяц и год, вводимые пользователем с консоли.
 //        Вывести дату следующего дня в формате "День.Месяц.Год".
 //        Учесть переход на следующий месяц, а также следующий год.
-//        Форматирование строки "День.Месяц.Год" вынести в отдельную функцию.
-
-import java.util.Scanner;
-
+//        Форматирование строки "День.Месяц.Год" вынести в отдельную функцию
 public class FiveOneTask1 {
+    
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         int day = 29;
         int month = 2;
         int year = 2020;
@@ -17,8 +15,8 @@ public class FiveOneTask1 {
         } else {
             System.out.println("Число записанно некоректно");
         }
-
     }
+
     public static boolean isDateValid(int day, int month, int year) {
         if (day > 0 && month > 0 && month <= 12 && year >= 0) {
             boolean result;
@@ -33,7 +31,6 @@ public class FiveOneTask1 {
             } else {
                 result = day <= 30;
             }
-
             return result;
         } else {
             return false;
@@ -68,7 +65,6 @@ public class FiveOneTask1 {
         } else {
             System.out.println(formatDate(day + 1, month, year));
         }
-
     }
 
     public static String formatDate(int day, int month, int year) {
