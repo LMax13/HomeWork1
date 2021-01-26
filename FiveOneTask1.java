@@ -4,7 +4,7 @@ import java.util.Scanner;
 //        Вывести дату следующего дня в формате "День.Месяц.Год".
 //        Учесть переход на следующий месяц, а также следующий год.
 //        Форматирование строки "День.Месяц.Год" вынести в отдельную функцию
-public class FiveOneTask1 {
+public class fiveonetask1 {
     
     public static void main(String[] args) {
         int day = 29;
