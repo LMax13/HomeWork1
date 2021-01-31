@@ -1,0 +1,16 @@
+//Написать программу, вычисляющую сумму цифр введённого пользователем целого числа.
+public class homework1 {
+    public static void main(String[] args) {
+        int sumofnumber = 2345;
+        int rusalt = sum(sumofnumber);
+        System.out.println(rusalt);
+    }
+
+    public static int sum(int value) {
+        int rusalt = 0;
+        for (int i = value; i != 0; i /= 10) {
+            rusalt += i % 10;
+        }
+        return rusalt;
+    }
+}
