@@ -1,0 +1,26 @@
+/*
+Написать программу, вычисляющую и отображающую все числа Фибоначчи меньше введённого пользователем целого числа.
+Решить двумя способами: с помощью цикла и с помощью рекурсии.
+ */
+public class homework2 {
+    public static void main(String[] args) {
+        int number = 1346269;
+        int result = fibo(number);
+        System.out.println(" из числа " + number + ".");
+    }
+
+    public static int fibo(int number) {
+        int result = 0;
+        int num1 = 0;
+        int num2 = 1;
+        int fibo;
+        System.out.print("Все числа Фибоначчи: " + num1 + "," + num2 + ",");
+        for (int i = 0; i <= number - num1; i = fibo) {
+            fibo = num1 + num2;
+            num1 = num2;
+            num2 = fibo;
+            System.out.print(fibo + ",");
+        }
+        return result;
+    }
+}
