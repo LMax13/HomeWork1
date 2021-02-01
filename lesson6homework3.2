@@ -1,0 +1,36 @@
+package com.dmdev.lesson6.homework;
+
+/*
+Написать программу, отображающую статистику по осадкам за N дней. N вводится пользователем.
+    Пользователь также должен ввести N целых чисел, обозначающих величину осадков в день.
+    Программа должна выводить:
+a. Количество дней
+b. Сумму осадков за этот период
+c. Среднее количество осадков за этот период
+d. Максимальное количество дневных осадков за этот период
+    Не использовать массивы!
+ */
+public class HomeWork3x2 {
+    public static void main(String[] args) {
+        int days = 15;
+        int maximumPrecipitation = 3;
+        getSumPrecipitation(days, maximumPrecipitation);
+    }
+
+    private static int getSumPrecipitation(int days, int maximumPrecipitation) {
+        int result = days;
+        int maxQuantity = maximumPrecipitation;
+        int precipitationSum = 0;
+        System.out.println("Количество дней: " + days);
+        for (int value = 1; value <= days; value++) {
+            int randomPrecipitation = (int) (Math.random() * (maxQuantity - 1 + 1) + 1);
+            precipitationSum += randomPrecipitation;
+        }
+        System.out.println("Сумму осадков: " + precipitationSum);
+        double daysdouble = days;
+        double sum = precipitationSum / daysdouble;
+        System.out.println("Среднее количество осадков: " + sum);
+        System.out.println("Максимальное количество дневных осадков: " + maxQuantity);
+        return result;
+    }
+}
